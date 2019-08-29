@@ -17,16 +17,14 @@ function showScreen(){
 
 function checkRightValues() {
     var country = document.getElementById('country'),
-        colors = document.getElementById('colors'),
         isPadawan = document.getElementById('r2').checked;
-    return country.value === '1' && colors === 'Green' && isPadawan;
-
+    return country.value === '1' && isPadawan;
 }
 
 function showErrorAlert() {
     var errorMessage = document.getElementById('error-message');
     if(!checkRightValues()) {
-        errorMessage.innerHTML = 'Você não atendeu as especificações desse form';
+        errorMessage.innerHTML = 'Error! Você não atendeu as especificações desse form';
     } else {
         errorMessage.innerHTML = '';
     }
