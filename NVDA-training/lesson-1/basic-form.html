@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Basic Form</title>
+    <meta name="description" content="A basic form">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="main.css">
+    <link href='http://fonts.googleapis.com/css?family=Courgette|Roboto:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="">
+                <h1>NVDA Training</h1>
+                <nav>
+                    <a href="../index.html">Home</a>
+                    <a href="#">About NVDA</a>
+                    <a href="#">References</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div>
+                <h2>Basic Form - Exercise</h2>
+                <p>
+                    Você deve encontrar os seguintes elementos dentro do form abaixo:
+                    2 primeiros checkbox
+                    Preencher os campos de texto
+                    Alterar o valor do combo box para a cor vermelha
+                    
+
+                </p>
+            </div>
+
+
+            <div class="card">
+                <form>
+                    <div class="element-selector">
+                        <label>
+                            <input type="radio" checked name="tType" value="0"> Amarelo
+                        </label>
+                        <input id="blue" type="checkbox" name="lalalaa" value="teste">
+                        <label>
+                            <input type="radio" name="tType" value="1"> Azul
+                        </label>
+                        <label>
+                            <input type="radio" name="tType" value="2"> Verde
+                        </label>
+                    </div>
+
+                    <div class="container">
+                        <h2>Fill the fields below</h2>
+                        <div class="row">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" name="fullName" id="fName" required aria-required="true">
+                        </div>
+
+                        <div class="row">
+                            <label for="address">Address</label>
+                            <textarea id="address" name="addressTxt"></textarea>
+                        </div>
+
+                        <div class="row">
+                            <div class="inline-control col-1">
+                                <label for="depCity">Departure</label>
+                                <input type="text" list="depCities" name="depCity" id="depCity">
+                                <datalist id="depCities">
+                                    <option value="Sydney">
+                                    <option value="Melbourne">
+                                    <option value="Brisbane">
+                                    <option value="Perth">
+                                    <option value="Adelaide">
+                                </datalist>
+                            </div>
+
+                            <div class="inline-control col-1">
+                                <label for="arrCity">Arrival</label>
+                                <input type="text" list="arrCities" name="arrCity" id="arrCity">
+                                <datalist id="arrCities">
+                                    <option value="Sydney">
+                                    <option value="Melbourne">
+                                    <option value="Brisbane">
+                                    <option value="Perth">
+                                    <option value="Adelaide">
+                                </datalist>
+                            </div>
+
+                            <div class="inline-control col-1">
+                                <label for="dDate">Depart Date</label>
+                                <input type="date" name="dDate" id="dDate">
+                            </div>
+
+                            <div class="inline-control col-1">
+                                <label for="rDate">Return Date</label>
+                                <input type="date" name="rDate" id="rDate">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="inline-control col-2">
+                                <label for="seatType">Preferred seat type</label>
+                                <select name="seatType" id="seatType">
+                                    <option value="0">No preference</option>
+                                    <option value="1">Aisle seat</option>
+                                    <option value="2">Window seat</option>
+                                </select>
+                            </div>
+
+                            <div class="inline-control sign-up col-1">
+                                <label>
+                                    <input type="checkbox" checked name="jLetter"> Receive promotional offers?
+                                </label>
+                            </div>
+
+                            <div class="inline-control submit-form col-1">
+                                <button type="submit" id="submitBtn">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="col-1">
+                    <a href="#">About us</a>
+                </div>
+                <div class="col-1">
+                    <a href="#">Join our newsletter</a>
+                </div>
+                <div class="col-1">
+                    <a href="#">Need Support?</a>
+                </div>
+                <div class="col-1">
+                    <a href="#">© 2015 Udacity</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="click-stealer"></div>
+
+    <script>
+        document.querySelector('.click-stealer').addEventListener('click', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            return false;
+        });
+    </script>
+</body>
+
+</html>
