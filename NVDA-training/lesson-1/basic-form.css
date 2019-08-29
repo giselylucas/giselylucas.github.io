@@ -1,0 +1,72 @@
+@import url('../main.css');
+
+.wrapper {
+    min-height: 100vh;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 100;
+    font-size: 30px;
+    background-color: #2196F3;
+    color: white;
+    padding: 0.25em 0.5em;
+    display: inline-block;
+    cursor: default;
+}
+
+.click-stealer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+}
+
+.element-selector {
+    margin: 0 auto;
+    padding-bottom: 16px;
+}  
+
+.card {
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    background: #fff;
+    padding-bottom: 16px;
+}
+
+.row {
+    margin-bottom: 16px;
+}
+
+.inline-control {
+display: inline-block;
+vertical-align: top;
+margin-right: 16px;
+}
+
+/* Columns */
+
+.col-1 {
+    width: calc(25% - 14px);
+  }
+  
+  .col-2 {
+    width: calc(50% - 14px);
+  }
+  
+  .col-3 {
+    width: calc(75% - 14px);
+  }
+  
+  .col-4 {
+    width: 100%;
+  }
+
+  .sign-up {
+    vertical-align: bottom;
+  }

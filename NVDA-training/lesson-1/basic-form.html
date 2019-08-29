@@ -10,51 +10,59 @@
     <!-- Mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="basic-form.css">
     <link href='http://fonts.googleapis.com/css?family=Courgette|Roboto:400,300' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="">
-                <h1>NVDA Training</h1>
-                <nav>
-                    <a href="../index.html">Home</a>
-                    <a href="#">About NVDA</a>
-                    <a href="#">References</a>
-                </nav>
-            </div>
-        </header>
+    <header>
+        <div class="menu">
+            <h1>NVDA Training</h1>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="#">About NVDA</a>
+                <a href="#">References</a>
+            </nav>
+        </div>
+    </header>
 
-        <main>
+    <main>
+        <div class="wrapper">
             <div>
                 <h2>Basic Form - Exercise</h2>
                 <p>
                     Você deve encontrar os seguintes elementos dentro do form abaixo:
-                    2 primeiros checkbox
-                    Preencher os campos de texto
-                    Alterar o valor do combo box para a cor vermelha
-
+                    <ul>
+                        <li>2 primeiros checkbox</li>
+                        <li>Preencher os campos de texto</li>
+                        <li>Alterar o valor do combo box para a cor vermelha</li>
+                        <li></li>
+                    </ul>
                 </p>
             </div>
 
             <div class="card">
                 <form>
+                    <h2>Fill the fields below</h2>
                     <div class="element-selector">
                         <label>
-                            <input type="radio" checked name="tType" value="0"> Amarelo
+                            <input type="radio" checked name="tType" value="0"> Newbie
                         </label>
                         <label>
-                            <input type="radio" name="tType" value="1"> Azul
+                            <input type="radio" name="tType" value="1"> Beginner
                         </label>
                         <label>
-                            <input type="radio" name="tType" value="2"> Verde
+                            <input type="radio" name="tType" value="2"> Padawan
+                        </label>
+                        <label>
+                            <input type="radio" name="tType" value="3"> Knight
+                        </label>
+                        <label>
+                            <input type="radio" name="tType" value="4"> Jedi
                         </label>
                     </div>
 
                     <div class="container">
-                        <h2>Fill the fields below</h2>
                         <div class="row">
                             <label for="fullName">Full Name</label>
                             <input type="text" name="fullName" id="fName" required aria-required="true">
@@ -67,66 +75,62 @@
 
                         <div class="row">
                             <div class="inline-control col-1">
-                                <label for="depCity">Departure</label>
-                                <input type="text" list="depCities" name="depCity" id="depCity">
-                                <datalist id="depCities">
-                                    <option value="Sydney">
-                                    <option value="Melbourne">
-                                    <option value="Brisbane">
-                                    <option value="Perth">
-                                    <option value="Adelaide">
+                                <label for="colors">Colors</label>
+                                <input type="text" list="colorsList" name="colorsList" id="colors">
+                                <datalist id="colorsList">
+                                    <option value="Yellow">
+                                    <option value="Blue">
+                                    <option value="Red">
+                                    <option value="Green">
+                                    <option value="Black">
                                 </datalist>
                             </div>
 
-                            <div class="inline-control col-1">
-                                <label for="arrCity">Arrival</label>
-                                <input type="text" list="arrCities" name="arrCity" id="arrCity">
-                                <datalist id="arrCities">
-                                    <option value="Sydney">
-                                    <option value="Melbourne">
-                                    <option value="Brisbane">
-                                    <option value="Perth">
-                                    <option value="Adelaide">
+                            <div class="inline-control col-2">
+                                <label for="numbers">Numbers</label>
+                                <input type="text" list="numbersList" name="numbersList" id="numbers">
+                                <datalist id="numbersList">
+                                    <option value="One">
+                                    <option value="Two">
+                                    <option value="Three">
+                                    <option value="Four">
+                                    <option value="Five">
                                 </datalist>
                             </div>
+                            
+                        </div>
 
+                        <div class="row">
+                            <label for="dDate">Birthday Date</label>
+                            <input type="date" name="dDate" id="dDate">
+                        </div>
+
+                        <div class="row">
                             <div class="inline-control col-1">
-                                <label for="dDate">Depart Date</label>
-                                <input type="date" name="dDate" id="dDate">
+                                <label for="country">Country: </label>
+                                <select name="country" id="country">
+                                    <option value="0">Argentina</option>
+                                    <option value="1">Brazil</option>
+                                    <option value="2">Japan</option>
+                                </select>
                             </div>
 
-                            <div class="inline-control col-1">
-                                <label for="rDate">Return Date</label>
-                                <input type="date" name="rDate" id="rDate">
+                            <div class="inline-control col-2">
+                                <label>
+                                    <input type="checkbox" checked name="jLetter"> Do you agree the Terms and Conditions
+                                </label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="inline-control col-2">
-                                <label for="seatType">Preferred seat type</label>
-                                <select name="seatType" id="seatType">
-                                    <option value="0">No preference</option>
-                                    <option value="1">Aisle seat</option>
-                                    <option value="2">Window seat</option>
-                                </select>
-                            </div>
-
-                            <div class="inline-control sign-up col-1">
-                                <label>
-                                    <input type="checkbox" checked name="jLetter"> Receive promotional offers?
-                                </label>
-                            </div>
-
-                            <div class="inline-control submit-form col-1">
-                                <button id="submitBtn" onclick="showScreen()">Search</button>
-                            </div>
+                            <button id="submitBtn" onclick="showScreen()">Search</button>
                         </div>
                     </div>
                 </form>
             </div>
-        </main>
-    </div>
-    <div id="hideScreen" class="click-stealer"></div>
+        </div>
+    </main>
+    <!----<div id="hideScreen" class="click-stealer"></div>-->
 
     <script>
         document.querySelector('.click-stealer').addEventListener('click', function (e) {
