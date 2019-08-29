@@ -71,13 +71,13 @@
 
                         <div class="row">
                             <label for="address">Address</label>
-                            <textarea id="address" name="addressTxt" class="text-field"></textarea>
+                            <textarea id="address" name="addressTxt" required aria-required="true" class="text-field"></textarea>
                         </div>
 
                         <div class="row">
                             <div class="inline-control col-1">
                                 <label for="colors">Colors</label>
-                                <input type="text" list="colorsList" name="colorsList" id="colors">
+                                <input type="text" list="colorsList" name="colorsList" id="colors" required aria-required="true">
                                 <datalist id="colorsList">
                                     <option value="Yellow">
                                     <option value="Blue">
@@ -89,7 +89,7 @@
 
                             <div class="inline-control col-2">
                                 <label for="numbers">Numbers</label>
-                                <input type="text" list="numbersList" name="numbersList" id="numbers">
+                                <input type="text" list="numbersList" name="numbersList" id="numbers" required aria-required="true">
                                 <datalist id="numbersList">
                                     <option value="One">
                                     <option value="Two">
@@ -103,13 +103,13 @@
 
                         <div class="row">
                             <label for="dDate">Birthday Date</label>
-                            <input type="date" name="dDate" id="dDate">
+                            <input type="date" name="dDate" id="dDate" required aria-required="true">
                         </div>
 
                         <div class="row">
                             <div class="inline-control col-1">
                                 <label for="country">Country: </label>
-                                <select name="country" id="country">
+                                <select name="country" id="country" required aria-required="true">
                                     <option value="0">Argentina</option>
                                     <option value="1">Brazil</option>
                                     <option value="2">Japan</option>
@@ -118,7 +118,7 @@
 
                             <div class="inline-control col-2">
                                 <label>
-                                    <input type="checkbox" checked name="jLetter"> Do you agree the Terms and Conditions
+                                    <input type="checkbox" checked name="jLetter" required aria-required="true"> Do you agree the Terms and Conditions
                                 </label>
                             </div>
                         </div>
@@ -141,7 +141,12 @@
             return false;
         });
         function showScreen(){
-            document.getElementById('hideScreen').remove();
+            var form = document.getElementById('form1'),
+                isValid = form.checkValidity();
+            
+            if(isValid) {
+                document.getElementById('hideScreen').remove();
+            }
         }
     </script>
 </body>
