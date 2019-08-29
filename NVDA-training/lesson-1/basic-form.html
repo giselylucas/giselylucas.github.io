@@ -35,11 +35,9 @@
                     2 primeiros checkbox
                     Preencher os campos de texto
                     Alterar o valor do combo box para a cor vermelha
-                    
 
                 </p>
             </div>
-
 
             <div class="card">
                 <form>
@@ -47,7 +45,6 @@
                         <label>
                             <input type="radio" checked name="tType" value="0"> Amarelo
                         </label>
-                        <input id="blue" type="checkbox" name="lalalaa" value="teste">
                         <label>
                             <input type="radio" name="tType" value="1"> Azul
                         </label>
@@ -121,32 +118,15 @@
                             </div>
 
                             <div class="inline-control submit-form col-1">
-                                <button type="submit" id="submitBtn">Search</button>
+                                <button type="submit" id="submitBtn" onclick="showScreen()">Search</button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
         </main>
-
-        <footer>
-            <div class="container">
-                <div class="col-1">
-                    <a href="#">About us</a>
-                </div>
-                <div class="col-1">
-                    <a href="#">Join our newsletter</a>
-                </div>
-                <div class="col-1">
-                    <a href="#">Need Support?</a>
-                </div>
-                <div class="col-1">
-                    <a href="#">© 2015 Udacity</a>
-                </div>
-            </div>
-        </footer>
     </div>
-    <div class="click-stealer"></div>
+    <div id="hideScreen" class="click-stealer"></div>
 
     <script>
         document.querySelector('.click-stealer').addEventListener('click', function (e) {
@@ -155,6 +135,9 @@
             e.stopImmediatePropagation();
             return false;
         });
+        function showScreen(){
+            document.getElementById('hideScreen').remove();
+        }
     </script>
 </body>
 
