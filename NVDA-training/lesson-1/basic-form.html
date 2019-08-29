@@ -44,7 +44,8 @@
             <div class="card">
                 <form>
                     <h2>Fill the fields below</h2>
-                    <div class="element-selector">
+                    <fieldset id="group1" class="element-selector">
+                        <legend> Select your level:</legend>
                         <label>
                             <input type="radio" checked name="tType" value="0"> Newbie
                         </label>
@@ -60,17 +61,17 @@
                         <label>
                             <input type="radio" name="tType" value="4"> Jedi
                         </label>
-                    </div>
+                    </fieldset>
 
                     <div class="container">
                         <div class="row">
                             <label for="fullName">Full Name</label>
-                            <input type="text" name="fullName" id="fName" required aria-required="true">
+                            <input type="text" name="fullName" id="fName" required aria-required="true" class="text-field">
                         </div>
 
                         <div class="row">
                             <label for="address">Address</label>
-                            <textarea id="address" name="addressTxt"></textarea>
+                            <textarea id="address" name="addressTxt" class="text-field"></textarea>
                         </div>
 
                         <div class="row">
