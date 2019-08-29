@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="basic-form.css">
     <link href='http://fonts.googleapis.com/css?family=Courgette|Roboto:400,300' rel='stylesheet' type='text/css'>
+    <script src="basic-form.js"></script>
 </head>
 
 <body>
@@ -28,38 +29,39 @@
 
     <main>
         <div class="wrapper">
-            <div>
+            <div tabindex="0">
                 <h2>Basic Form - Exercise</h2>
                 <p>
                     Você deve encontrar os seguintes elementos dentro do form abaixo:
                     <ul>
-                        <li>2 primeiros checkbox</li>
-                        <li>Preencher os campos de texto</li>
-                        <li>Alterar o valor do combo box para a cor vermelha</li>
-                        <li></li>
+                        <li>Preencha todos os campos de texto</li>
+                        <li>Selecione a terceira opção no grupo de niveis</li>
+                        <li>No campo de cores, digite Green</li>
+                        <li>No campo de País, selecione o Brasil</li>
+                        <li>Marque a opção que diz aceito os Termos e Condições</li>
                     </ul>
                 </p>
             </div>
 
             <div class="card">
-                <form id="form1">
+                <form id="form1" onsubmit="return false">
                     <h2>Fill the fields below</h2>
                     <fieldset id="group1" class="element-selector">
                         <legend> Select your level:</legend>
                         <label>
-                            <input type="radio" checked name="tType" value="0"> Newbie
+                            <input id="r0" type="radio" name="rType" value="0" required aria-required="true"> Newbie
                         </label>
                         <label>
-                            <input type="radio" name="tType" value="1"> Beginner
+                            <input id="r1" type="radio" name="rType" value="1"> Beginner
                         </label>
                         <label>
-                            <input type="radio" name="tType" value="2"> Padawan
+                            <input id="r2" type="radio" name="rType" value="2"> Padawan
                         </label>
                         <label>
-                            <input type="radio" name="tType" value="3"> Knight
+                            <input id="r3" type="radio" name="rType" value="3"> Knight
                         </label>
                         <label>
-                            <input type="radio" name="tType" value="4"> Jedi
+                            <input id="r4" type="radio" name="rType" value="4"> Jedi
                         </label>
                     </fieldset>
 
@@ -75,8 +77,13 @@
                         </div>
 
                         <div class="row">
+                            <label for="bDate">Birthday Date</label>
+                            <input type="date" name="bDate" id="bDate" required aria-required="true">
+                        </div>
+
+                        <div class="row">
                             <div class="inline-control col-1">
-                                <label for="colors">Colors</label>
+                                <label for="colors">Color:</label>
                                 <input type="text" list="colorsList" name="colorsList" id="colors" required aria-required="true">
                                 <datalist id="colorsList">
                                     <option value="Yellow">
@@ -88,7 +95,7 @@
                             </div>
 
                             <div class="inline-control col-2">
-                                <label for="numbers">Numbers</label>
+                                <label for="numbers">Number:</label>
                                 <input type="text" list="numbersList" name="numbersList" id="numbers" required aria-required="true">
                                 <datalist id="numbersList">
                                     <option value="One">
@@ -99,11 +106,6 @@
                                 </datalist>
                             </div>
                             
-                        </div>
-
-                        <div class="row">
-                            <label for="dDate">Birthday Date</label>
-                            <input type="date" name="dDate" id="dDate" required aria-required="true">
                         </div>
 
                         <div class="row">
@@ -118,7 +120,7 @@
 
                             <div class="inline-control col-2">
                                 <label>
-                                    <input type="checkbox" checked name="jLetter" required aria-required="true"> Do you agree the Terms and Conditions
+                                    <input type="checkbox" name="cType" required aria-required="true"> Do you agree the Terms and Conditions
                                 </label>
                             </div>
                         </div>
@@ -127,6 +129,8 @@
                             <button id="submitBtn" onclick="showScreen()">Search</button>
                         </div>
                     </div>
+
+                    <span id="error-message" class="error-alert" aria-live="polite"></span>
                 </form>
             </div>
         </div>
@@ -134,20 +138,7 @@
     <div id="hideScreen" class="click-stealer"></div>
 
     <script>
-        document.querySelector('.click-stealer').addEventListener('click', function (e) {
-            e.stopPropagation();
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            return false;
-        });
-        function showScreen(){
-            var form = document.getElementById('form1'),
-                isValid = form.checkValidity();
-            
-            if(isValid) {
-                document.getElementById('hideScreen').remove();
-            }
-        }
+        
     </script>
 </body>
 

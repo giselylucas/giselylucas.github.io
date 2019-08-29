@@ -25,6 +25,7 @@ button {
     left: 0;
     z-index: 1;
     background-color: #FFF;
+    opacity: 0.5;
 }
 
 .element-selector {
@@ -51,6 +52,12 @@ button {
 
 .text-field {
     width: 450px;
+}
+
+.error-alert {
+    padding: 20px;
+    color: #f44336; /* Red */
+    margin-bottom: 15px;
 }
 
 .inline-control {
