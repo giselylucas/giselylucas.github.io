@@ -28,6 +28,17 @@
     </header>
 
     <main>
+        <div tabindex="0">
+            <h2>Content Navigation - Exercise</h2>
+            <p>
+                No paragrafo de cada sessão abaixo possui uma fruta, porém a fruta válida está dentro do título
+                de nível 2 com o nome "Help your cat Sleep"
+                Acesse o seu link de read-more e responda a pergunta, corretamente para completar o desafio.
+            </p>
+        </div>
+
+        <span id="error-message" class="error-alert" aria-live="polite"></span>
+
         <div class="blog-card">
             <div class="meta">
                 <div class="photo" style="background-image: url(../images/1.jpg)">
@@ -36,11 +47,17 @@
             <div class="description">
                 <h2>About the Meeting</h2>
                 <h3>Photo by Annie Spratt on Unsplash</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sapien est, id ullamcorper erat interdum ullamcorper.
+                    Nunc nec eros sodales, auctor felis quis, consequat nulla.
+                    Fusce interdum euismod eros at bibendum.<span class="fruit">Watermelon</span>
+                    Nam hendrerit placerat lobortis. Suspendisse potenti.
+                    Ut finibus elit suscipit sodales ultricies.
+                    Morbi eget nisi a libero efficitur venenatis a in orci.
+                    Duis ut lacus porta, porta est id, interdum risus.
+                    Curabitur est nisi, dictum nec aliquet ut, mollis et est.
+                    Pellentesque id augue eget nisl volutpat pulvinar at nec erat.</p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(false)">Read More</a>
                 </p>
             </div>
         </div>
@@ -52,11 +69,18 @@
             <div class="description">
                 <h2>Mastering the Language</h2>
                 <h3>Photo by Clément H on Unsplash</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> Etiam hendrerit neque eu tortor semper molestie.
+                    Suspendisse facilisis lacinia mauris vitae bibendum.
+                    Nullam venenatis metus ut lobortis sodales.<span class="fruit">Grapes</span>
+                    Aliquam ac varius purus, sit amet accumsan elit.
+                    Duis accumsan, risus eget dapibus ultrices, tellus nisi eleifend lacus, quis scelerisque sem dui ut lorem.
+                    Proin elementum ex ante, vel pulvinar lectus iaculis eget.
+                    Nam sed massa mollis, cursus purus quis, hendrerit eros.
+                    Vestibulum mollis magna vitae quam aliquet, laoreet interdum ipsum pellentesque.
+                    Nullam ullamcorper nibh eu tellus fringilla dignissim.
+                    Vivamus consectetur purus eget efficitur vehicula.</p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(false)">Read More</a>
                 </p>
             </div>
         </div>
@@ -68,11 +92,16 @@
             <div class="description">
                 <h2>Learning to Code</h2>
                 <h3>Photo by John Schnobrich on Unsplash</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> Quisque euismod nisi mi, a auctor felis lacinia a.
+                    Aliquam accumsan, lorem at suscipit mollis, tellus sem consectetur urna, vel vulputate massa mi at lacus.
+                    Aliquam varius mauris magna, sit amet ultrices tellus elementum eget.<span class="fruit">Strawberry</span>
+                    Nunc nec purus sapien. Sed placerat orci sed neque tempor, ut dictum neque efficitur. 
+                    Sed condimentum lorem finibus aliquam tempus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque volutpat lacus ut sodales porttitor.
+                    Morbi sollicitudin ac dolor nec dignissim.</p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(false)">Read More</a>
                 </p>
             </div>
         </div>
@@ -84,11 +113,14 @@
             <div class="description">
                 <h2>Eradication goal splits malaria community</h2>
                 <h3>Photo by Louis Reed on Unsplash</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> Pellentesque pellentesque tincidunt erat malesuada tempor. Sed et consectetur quam.
+                    Cras tempus auctor ex sit amet efficitur. Sed semper pharetra eros, non condimentum turpis pulvinar ac.
+                    Donec euismod mauris vitae est pretium tincidunt.<span class="fruit">Lemon</span>
+                    Aliquam sagittis, urna eget mattis finibus, nibh mi hendrerit augue, sit amet sollicitudin risus mi at neque.
+                    Aenean eu tortor in orci semper malesuada. Aliquam fermentum egestas nisi.
+                    Proin imperdiet posuere risus vel vestibulum.</p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(false)">Read More</a>
                 </p>
             </div>
         </div>
@@ -100,11 +132,15 @@
             <div class="description">
                 <h2>Between two words</h2>
                 <h3>Photo by SpaceX on Unsplash</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> Phasellus neque metus, vestibulum vel tincidunt vel, mattis eu tortor.
+                    Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Nullam vestibulum volutpat quam, in gravida justo eleifend malesuada.
+                    Morbi fermentum odio quam, eget feugiat quam malesuada id.
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    Etiam sit amet aliquam massa. Phasellus sit amet hendrerit orci.
+                    Donec id maximus ipsum, ut semper ex. <span class="fruit">Orange</span></p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(false)">Read More</a>
                 </p>
             </div>
         </div>
@@ -116,11 +152,19 @@
             <div class="description">
                 <h2>Machine Learning</h2>
                 <h3>Photo by Markus Spiske on Unsplash</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> Nulla sed nulla non metus suscipit lacinia.<span class="fruit">Pineapple</span>
+                    Sed euismod ex nulla, quis pulvinar sapien aliquam ac.
+                    Curabitur ornare mi vitae justo maximus mattis.
+                    Mauris egestas lacinia nisl ac vulputate.
+                    Mauris a porttitor augue, id volutpat odio.
+                    Nullam convallis turpis feugiat, rutrum ipsum sit amet, accumsan purus. 
+                    Integer metus mauris, hendrerit id leo convallis, consectetur hendrerit orci. 
+                    Duis ac orci vitae magna pulvinar volutpat ut eu risus. Integer at eleifend ante. 
+                    Integer varius dolor cursus felis consequat sagittis.
+                    Morbi mattis non mi id euismod.
+                    Sed feugiat risus nisi, euismod malesuada est posuere ut.</p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(false)">Read More</a>
                 </p>
             </div>
         </div>
@@ -132,11 +176,14 @@
             <div class="description">
                 <h2>Making olive oil sustainable</h2>
                 <h3>Photo by Vadim Gromov on Unsplash</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> <span class="fruit">Apple</span>
+                    Duis lacus metus, fermentum bibendum ultrices id, rhoncus eget turpis.
+                    Proin vitae laoreet libero. Nullam efficitur libero at nisl fermentum, sit amet cursus lacus pellentesque.
+                    Pellentesque sem est, vestibulum ut pellentesque a, tincidunt vel nibh.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Sed ullamcorper lectus id tincidunt euismod. Nulla laoreet fringilla nibh, id pharetra tortor porta vel.</p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(false)">Read More</a>
                 </p>
             </div>
         </div>
@@ -148,11 +195,17 @@
             <div class="description">
                 <h2>Help your cat Sleep</h2>
                 <h3>Photo by Yerlin Matu on Unsplash</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> Fusce congue dapibus metus, eget convallis arcu.
+                    Aenean vel elit non libero rhoncus tempor.
+                    Suspendisse sed eleifend nisl.
+                    Donec suscipit neque id risus elementum porttitor. <span class="fruit">Avocado</span>
+                    Pellentesque nec nibh quis est tincidunt vestibulum a non nisi.
+                    Pellentesque pretium aliquam dolor. Quisque vitae nunc consectetur, feugiat urna nec, fermentum nunc.
+                    Mauris eget interdum erat. Vivamus lectus libero, maximus et elementum at, semper mollis neque.
+                    Donec vel ornare nisi. Morbi dolor enim, euismod in volutpat sed, pulvinar eget leo.
+                    Fusce dolor ex, aliquet vitae vehicula eu, pharetra non magna.</p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(true)">Read More</a>
                 </p>
             </div>
         </div>
@@ -164,11 +217,14 @@
             <div class="description">
                 <h2>Decoration Tips</h2>
                 <h3>Photo by James Cousins on Unsplash</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> Donec aliquam pretium mi at luctus. Etiam sed risus et tortor fermentum suscipit ut imperdiet mi.
+                    Phasellus porttitor semper elit, id congue sem elementum consectetur.
+                    Nam scelerisque consequat ipsum sed fringilla. <span class="fruit">Banana</span>
+                    Sed quam ex, elementum ut dapibus at, viverra ac libero. 
+                    Nam aliquam ante urna, ac porttitor eros elementum at.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(false)">Read More</a>
                 </p>
             </div>
         </div>
@@ -180,17 +236,18 @@
             <div class="description">
                 <h2>Dogs Training</h2>
                 <h3>Photo by ipet photo on Unsplash</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                    dicta
-                    praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p> Quisque lobortis, enim a posuere lacinia, lacus mauris tempus ipsum, et congue eros tortor at nulla.
+                    Nullam ultricies, ligula quis pretium commodo, magna nisi consequat purus, ac gravida nunc leo vel diam.
+                    Ut eu vestibulum turpis. Aliquam luctus et mauris luctus semper.
+                    Donec euismod tempor scelerisque. Phasellus ut convallis mauris. <span class="fruit">Guava</span>
+                    Nam scelerisque ullamcorper ipsum, sed viverra velit congue non.
+                    Maecenas convallis condimentum eros, imperdiet ultrices libero pellentesque vehicula.</p>
                 <p class="read-more">
-                    <a href="#">Read More</a>
+                    <a href="#" onclick="showScreen(false)">Read More</a>
                 </p>
             </div>
         </div>
     </main>
-
-    <span id="error-message" class="error-alert" aria-live="polite"></span>
 
     <div id="hideScreen" class="click-stealer"></div>
 
